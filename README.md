@@ -124,7 +124,8 @@ private void simpanKotaLokasiKeFile() {
             e.printStackTrace();
         }
     }
-~~~    
+~~~
+~~~ 
      private void muatKotaLokasiKeFile() {
         try (BufferedReader reader = new BufferedReader(new FileReader("cities.txt"))) {
             String city;
