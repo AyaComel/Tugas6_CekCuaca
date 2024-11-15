@@ -159,7 +159,7 @@ private void simpanKotaLokasiKeFile() {
         }
     }   
 ~~~
-~~~
+
 # 6. Contoh Gambar pada saat di Run
 ![](https://github.com/AyaComel/Tugas6_CekCuaca/blob/main/Tugas6.png)
 
