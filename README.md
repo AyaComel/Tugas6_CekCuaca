@@ -33,7 +33,7 @@ Menggunakan ActionListener dan ItemListener untuk menangani interaksi pengguna:
 # a. ActionListener untuk tombol Cek Cuaca
 Mengambil data cuaca berdasarkan nama kota yang dimasukkan dan menampilkan informasi cuaca pada aplikasi.
 ~~~
-private void buttonCekCuacaActionPerformed(java.awt.event.ActionEvent evt) {                                               
+private void buttonCekActionPerformed(java.awt.event.ActionEvent evt) {                                          
     // Action untuk tombol "Cek Cuaca"
      String cityName = textNamaKota.getText();
         if (!cityName.isEmpty()) {
@@ -63,7 +63,7 @@ private void buttonCekCuacaActionPerformed(java.awt.event.ActionEvent evt) {
 # b. ItemListener pada JComboBox untuk memilih lokasi cuaca
 Mengambil data cuaca untuk kota yang dipilih dari JComboBox dan menampilkannya di aplikasi.
 ~~~
-private void comboBoxKotaFavoritItemStateChanged(java.awt.event.ItemEvent evt) {                                                     
+private void comboBoxKotaItemStateChanged(java.awt.event.ItemEvent evt) {                                                     
        if (evt.getStateChange() == ItemEvent.SELECTED) {
             String selectedCity = (String) comboBoxDaftarKota.getSelectedItem();
             textNamaKota.setText(selectedCity); // Mengisi txtCityName dengan kota yang dipilih
@@ -76,7 +76,7 @@ Aplikasi ini beberapa macam variasi tambahan :
 # Daftar lokasi favorit
 sehingga dapat dipilih dengan cepat dari JComboBox
 ~~~
-private void buttonCekCuacaActionPerformed(java.awt.event.ActionEvent evt) {
+private void buttonCekActionPerformed(java.awt.event.ActionEvent evt) {
 ...             
              boolean exists = false;
                 for (int i = 0; i < comboBoxDaftarKota.getItemCount(); i++) {
@@ -140,7 +140,7 @@ private void simpanKotaLokasiKeFile() {
 ~~~
 # fitur untuk memuat data cuaca yang tersimpan dan menampilkannya di JTable.
 ~~~
- private void buttonMuatDataCuacaActionPerformed(java.awt.event.ActionEvent evt) {                                                    
+ private void buttonDataActionPerformed(java.awt.event.ActionEvent evt) {                                           
     tableModel.setRowCount(0); // Hapus data lama di tabel sebelum memuat data baru
 
         try (BufferedReader reader = new BufferedReader(new FileReader("weather_data.csv"))) {
